@@ -52,3 +52,14 @@ end)
 SectionMics:NewButton("DEX", "ХЗ", function()
    loadstring(game:GetObjects("rbxassetid://418957341")[1].Source)()
 end)
+
+SectionMics:NewKeybind("BigHeads", "KeybindInfo", Enum.KeyCode.Z, function()
+	    for i, childrik in ipairs(workspace:GetDescendants()) do
+        if childrik:FindFirstChild("Humanoid") then
+                if childrik ~= game.Players.LocalPlayer.Character then
+                    childrik.Head.Size = Vector3.new(4,4,4)
+                    childrik.Head.Transparency = 0.5
+            end
+        end
+    end
+end)
