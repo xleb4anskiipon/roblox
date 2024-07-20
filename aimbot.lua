@@ -7,7 +7,7 @@ local LocalPlayer = Players.LocalPlayer
 local Holding = false
 
 _G.AimbotEnabled = true
-_G.TeamCheck = true -- If set to true then the script would only lock your aim at enemy team members.
+_G.TeamCheck = false -- If set to true then the script would only lock your aim at enemy team members.
 _G.AimPart = "Head" -- Where the aimbot script would lock at.
 _G.Sensitivity = 0 -- How many seconds it takes for the aimbot script to officially lock onto the target's aimpart.
 
@@ -20,7 +20,7 @@ _G.CircleVisible = true -- Determines whether or not the circle is visible.
 _G.CircleThickness = 1 -- The thickness of the circle.
 
 local FOVCircle = Drawing.new("Circle")
-FOVCircle.Position = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
+FOVCircle.Position = Vector2.new(Camera.ViewportSize.X / 2, Camera.View	portSize.Y / 2)
 FOVCircle.Radius = _G.CircleRadius
 FOVCircle.Filled = _G.CircleFilled
 FOVCircle.Color = _G.CircleColor
